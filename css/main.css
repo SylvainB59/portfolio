@@ -96,19 +96,33 @@ textarea {
    ========================================================================== */
 
 /*start of common rules*/
-
-/*Enc of common rules*/
-
-/*START OF HEADER*/
-
 * {
   margin: 0;
   padding: 0;
 }
 
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: black;
+  font-family: 'Neucha', cursive;
+}
+
+/*Enc of common rules*/
+
+/*START OF HEADER*/
+
+
 header {
   position: relative;
-  background-color: black;
   height: 100vh;
   width: 100vw;
 }
@@ -117,9 +131,13 @@ header section {
   width: 100%;
   height: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background: url(../img/pleine_lune.jpg) no-repeat 50% 50%;
+  position: relative;
+  overflow: hidden;
+  padding-top: 15%;
 }
 
 /*~~~~~ RIDEAUX ~~~~~*/
@@ -159,74 +177,66 @@ h1 {
   color: white;
   text-align: center;
   font-size: 6em;
+  font-weight: bold;
   font-family: 'Indie Flower', cursive;
   letter-spacing: 3px;
   opacity: 0;
-  animation: clignote 5s step-start 5s forwards;
+  animation: clignote 5s step-start 2s forwards;
 }
 
 
 .lun {
-  animation: clignote 5s step-start 5s forwards;
+  animation: clignote 5s step-start 2s forwards;
 }
 
 .ldeux {
-  animation: clignote 5s step-start 5.8s forwards;
+  animation: clignote 5s step-start 2.8s forwards;
 }
 
 .ltrois {
-  animation: clignote 5s step-start 5.2s forwards;
+  animation: clignote 5s step-start 2.2s forwards;
 }
 
 .lquatre {
-  animation: clignote 5s step-start 5.6s forwards;
+  animation: clignote 5s step-start 2.6s forwards;
 }
 
 .lcinq {
-  animation: clignote 5s step-start 6.2s infinite;
+  animation: clignote 5s step-start 3.2s infinite;
 }
 
 .lsix {
-  animation: clignote 5s step-start 6s forwards;
+  animation: clignote 5s step-start 3s forwards;
 }
 
 .lsept {
-  animation: clignote 5s step-start 6.4s forwards;
+  animation: clignote 5s step-start 3.4s forwards;
 }
 
 .lhuit {
-  animation: clignote 5s step-start 5.4s forwards;
+  animation: clignote 5s step-start 2.4s forwards;
 }
 
-/*~~~~~~~~~~  ANIMATIONS  ~~~~~~~~~~*/
 
-@keyframes openUp {
-  from {
-    top: 0;
-  }
-  to {
-    top: -90%;
-  }
+/*~~~~~ ARROW DOWN ~~~~~*/
+
+.arrowContainer {
+    position: relative;
+    height: 50%;
+    background-color: red;
 }
 
-@keyframes openHor {
-  from {
-    width: 50%;
-  }
-  to {
-    width: 5%;
-  }
-}
-
-@keyframes clignote {
-  from, 9%, 11%, 13%, 19%, 21%, 29%, 35%, 37%, 54%, 56%, 57%, 61%, 69% {
+header .arrow {
+    position: absolute;
+    left: -64px;
+    color: white;
+    text-shadow: 0 0 20px white;
+    font-size: 8em;
     opacity: 0;
-  }
-  10%, 12%, 20%, 30%, 34%, 36%, 55%, 60%, 70%, to {
-    opacity: 1;
-    text-shadow: 0 0 10px black, 0 0 20px white;
-  }
+    animation: arrowDown 1s 8.5s infinite;
 }
+
+
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
@@ -234,9 +244,51 @@ h1 {
 
 /*START OF SECTION*/
 
+.main {
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main article {
+    border: 5px solid white;
+    overflow: hidden;
+    padding: 5%;
+}
+
+.main h2 {
+    text-align: center;
+    font-size: 3em;
+}
+
+.main p {
+    font-size: 2em;
+}
+
+
+
 /*END OF SECTION*/
 
 /*START OF FOOTER*/
+
+footer {
+    display: flex;
+    justify-content: space-around;
+}
+
+footer a {
+    font-weight: bold;
+    border: 2px solid white;
+    transition: .5s;
+}
+
+footer a:hover {
+    color: black !important;
+    background-color: white;
+    text-decoration: none;
+}
 
 /*END OF FOOTER*/
 
@@ -283,7 +335,45 @@ h1 {
     /*END OF FOOTER*/
 }
 
+/*~~~~~~~~~~  ANIMATIONS  ~~~~~~~~~~*/
 
+@keyframes openUp {
+  from {
+    top: 0;
+  }
+  to {
+    top: -90%;
+  }
+}
+
+@keyframes openHor {
+  from {
+    width: 50%;
+  }
+  to {
+    width: 5%;
+  }
+}
+
+@keyframes clignote {
+  from, 9%, 11%, 13%, 19%, 21%, 29%, 35%, 37%, 54%, 56%, 57%, 61%, 69% {
+    opacity: 0;
+  }
+  10%, 12%, 20%, 30%, 34%, 36%, 55%, 60%, 70%, to {
+    opacity: 1;
+    text-shadow: 0 0 20px black, 0 0 100px white;
+  }
+}
+
+@keyframes arrowDown {
+    from {
+        top: 0%;
+        opacity: 1;
+    }
+    to {
+        top: 100%;
+    }
+}
 
 
 

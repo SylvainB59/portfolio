@@ -121,6 +121,17 @@ h1, h2 {
     text-align: center;
 }
 
+a {
+    color: white;
+    border: 2px solid white;
+}
+
+a:hover {
+    color: black;
+    background-color: white;
+    text-decoration: none;
+}
+
 /*Enc of common rules*/
 
 /*START OF HEADER*/
@@ -185,7 +196,7 @@ header h1 {
   font-family: 'Indie Flower', cursive;
   letter-spacing: 3px;
   opacity: 0;
-  animation: clignote 5s step-start 2s forwards;
+  animation: clignote 5s step-start 1s forwards;
 }
 
 
@@ -265,7 +276,7 @@ header .arrow {
 
 .main article:hover {
     border-color: transparent;
-    box-shadow: 0 0 30px white;
+    box-shadow: 0 0 20px white;
 }
 
 .main h2 {
@@ -279,7 +290,7 @@ header .arrow {
 
 /*~~~~~~~~~~ project section ~~~~~~~~~~*/
 
-.btn {
+/*.btn {
     background-color: black;
     border-color: white;
     transition: .5s;
@@ -289,7 +300,7 @@ header .arrow {
     color:black;
     background-color: white;
 }
-
+*/
 
 /*~~~~~~~~~~ contact section ~~~~~~~~~~*/
 
@@ -306,17 +317,12 @@ footer {
 }
 
 footer a {
-    color: white;
     font-weight: bold;
-    border: 2px solid white;
     border-radius: 10px;
     transition: .5s;
 }
 
 footer a:hover {
-    color: black;
-    background-color: white;
-    text-decoration: none;
     box-shadow: 0 0 15px white;
     border-radius: 100%;
 }
@@ -361,21 +367,85 @@ footer a:hover {
 
         /*~~~~~~~~~~ project section ~~~~~~~~~~*/
 
-    /*.preview {
-        background-color: black;
-        width: 50%;
-        height:300px;
-        margin: auto;
-        border: 1px solid white;
+    .mainProject article {
+        margin-bottom: 10px;
         transition: 1s;
     }
 
-    #collapseExample .lbc:hover .preview {
-        background-color: red !important;
+    .mainProject article:hover {
+        margin-bottom: 350px;
     }
 
-    #collapseExample .pba:hover .preview {
-        background-color: blue !important;
+    .mainProject ul {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        height: 40px;
+    }
+
+    .mainProject a {
+        padding: 20px;
+        transition: 1s;
+        margin-bottom: 10px;
+    }
+
+    .previewA, .previewB {
+        background-color: black;
+        left: 0;
+        top: 100%;
+        width: 100%;
+        height: 0;
+        margin: auto;
+        border: 5px solid white;
+        transition: left 2s, height 1s, width 2s;
+        overflow: hidden;
+        position: absolute;
+    }
+
+    a:hover~.previewA, a:hover~.previewB {
+        left: 25%;
+        width: 50%;
+        height: 300px;
+    }
+
+    .ardu:hover~.previewA {
+        background: url(../img/archiduchesse.png) no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .abnb:hover~.previewA {
+        background: url(../img/AirBNB.png) no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .lbc:hover~.previewA {
+        background: url(../img/LeBonCoin.png) no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .pba:hover~.previewA {
+        background: url(../img/pba.png) no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .siteA:hover~.previewB {
+        background: url(../img/chopasus.png) no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .siteB:hover~.previewB {
+        background: url(../img/plombier.png) no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .siteC:hover~.previewB {
+        background: url(../img/tatoueur.png) no-repeat;
+        background-size: 100% 100%;
+    }
+
+    /*.siteD:hover~.previewB {
+        background: url(../img/pba.png) no-repeat;
+        background-size: 100% 100%;
     }*/
 
 
@@ -389,7 +459,7 @@ footer a:hover {
 
 /*~~~~~~~~~~  ANIMATIONS  ~~~~~~~~~~*/
 
-@keyframes openUp {
+/*@keyframes openUp {
   from {
     top: 0;
   }
@@ -405,7 +475,7 @@ footer a:hover {
   to {
     width: 5%;
   }
-}
+}*/
 
 @keyframes clignote {
   from, 9%, 11%, 13%, 19%, 21%, 29%, 35%, 37%, 54%, 56%, 57%, 61%, 69% {
@@ -413,7 +483,7 @@ footer a:hover {
   }
   10%, 12%, 20%, 30%, 34%, 36%, 55%, 60%, 70%, to {
     opacity: 1;
-    text-shadow: 0 0 20px black, 0 0 100px white;
+    text-shadow: 0 0 50px black, 0 0 100px white;
   }
 }
 

@@ -213,7 +213,7 @@ header h1 {
     background-color: red;
 }
 
-header .arrow {
+header .arrowDown {
     position: absolute;
     left: -64px;
     text-shadow: 0 0 20px white;
@@ -293,10 +293,60 @@ header .arrow {
     display: none;
 }
 
+.containArrowL {
+    width: 5%;
+    height: 100%;
+    position: relative;
+}
+
+.arrowLeft {
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    top: 0;
+    left: 90%;
+    font-size: 40px;
+    animation: arrowL .5s alternate infinite;
+}
+
+@keyframes arrowL {
+    from {
+        left: 0%;
+    }
+    to {
+        left: 50%;
+    }
+}
+
 
 
 /*~~~~~~~~~~ contact section ~~~~~~~~~~*/
 
+.mainContact form {
+    text-align: center;
+    font-weight: bold;
+    /*background-color: white;*/
+}
+
+.mainContact input, .mainContact textarea, .mainContact input[type="submit"] {
+    color: black;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    width: 90%;
+    transition: .5s;
+}
+
+.mainContact textarea {
+    height: 174px;
+}
+
+.mainContact input:focus, .mainContact textarea:focus, .mainContact input[type="submit"]:hover {
+    color: white;
+    background-color: black;
+    border: 2px solid white;
+}
 
 
 
@@ -344,6 +394,20 @@ footer a:hover {
     /*END OF HEADER*/
 
     /*START OF SECTION*/
+
+    /*~~~~~~~~~~ mainContact ~~~~~~~~~~*/
+
+    .mainContact form {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .mainContact input, .mainContact textarea, .mainContact input[type="submit"] {
+        width: 100%;
+    }
+
 
     /*END OF SECTION*/
 
@@ -412,7 +476,7 @@ footer a:hover {
         height: 0;
         margin: auto;
         border: 5px solid white;
-        transition: left 2s, height 1s, width 2s;
+        transition: left 1s, height 1s, width 1s;
         overflow: hidden;
         position: absolute;
     }
@@ -457,6 +521,9 @@ footer a:hover {
         background: url(../img/tatoueur.png) no-repeat;
         background-size: 100% 100%;
     }
+
+        /*~~~~~~~~~~ project section ~~~~~~~~~~*/
+
 
 
 

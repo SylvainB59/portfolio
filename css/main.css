@@ -101,6 +101,11 @@ textarea {
   padding: 0;
 }
 
+body {
+  color: white;
+  background-color: black;
+  font-family: 'Neucha', cursive;
+}
 figure {
   margin: 0;
   padding: 0;
@@ -109,12 +114,6 @@ figure {
 img {
   width: 100%;
   height: 100%;
-}
-
-body {
-  color: white;
-  background-color: black;
-  font-family: 'Neucha', cursive;
 }
 
 h1, h2 {
@@ -288,19 +287,21 @@ header .arrow {
     font-size: 2em;
 }
 
+.logoList {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logoList figure {
+    width: 60px;
+    height: auto;
+}
+
 /*~~~~~~~~~~ project section ~~~~~~~~~~*/
 
-/*.btn {
-    background-color: black;
-    border-color: white;
-    transition: .5s;
-}
 
-.btn:hover {
-    color:black;
-    background-color: white;
-}
-*/
 
 /*~~~~~~~~~~ contact section ~~~~~~~~~~*/
 
@@ -364,6 +365,12 @@ footer a:hover {
     /*END OF HEADER*/
 
     /*START OF SECTION*/
+
+        /*~~~~~~~~~~ index section ~~~~~~~~~~*/
+
+    .logoList {
+        flex-wrap: nowrap;
+    }
 
         /*~~~~~~~~~~ project section ~~~~~~~~~~*/
 

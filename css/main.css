@@ -309,15 +309,6 @@ header .arrowDown {
     animation: arrowL .5s alternate infinite;
 }
 
-@keyframes arrowL {
-    from {
-        left: 0%;
-    }
-    to {
-        left: 50%;
-    }
-}
-
 
 
 /*~~~~~~~~~~ contact section ~~~~~~~~~~*/
@@ -587,6 +578,14 @@ footer a:hover {
     }
 }
 
+@keyframes arrowL {
+    from {
+        left: 0%;
+    }
+    to {
+        left: 50%;
+    }
+}
 
 
 

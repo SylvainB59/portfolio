@@ -131,6 +131,10 @@ a:hover {
     text-decoration: none;
 }
 
+.mainProject, .mainContact {
+    margin-top: 20%;
+}
+
 /*Enc of common rules*/
 
 /*START OF HEADER*/
@@ -153,37 +157,6 @@ header section {
   position: relative;
   overflow: hidden;
   padding-top: 15%;
-}
-
-/*~~~~~ RIDEAUX ~~~~~*/
-
-.rg, .rl, .rf {
-  background: url(../img/rideau-rouge.jpg) no-repeat center/100% 100%;
-}
-
-.rg, .rl {
-  width: 50%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  animation: openHor 2s ease-out 2.5s forwards;
-}
-
-.rg{
-  left: 0;
-}
-
-.rl {
-  right: 0;
-}
-
-.rf {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  animation: openUp 3s ease-out 1s forwards;
 }
 
 /*~~~~~ TITRE ~~~~~*/
@@ -246,7 +219,7 @@ header .arrow {
     text-shadow: 0 0 20px white;
     font-size: 8em;
     opacity: 0;
-    animation: arrowDown 1s 8.5s alternate infinite;
+    animation: arrowDown 1s 5s alternate infinite;
 }
 
 
@@ -279,7 +252,6 @@ header .arrow {
 }
 
 .main h2 {
-    /*text-align: center;*/
     font-size: 3em;
 }
 
@@ -301,6 +273,26 @@ header .arrow {
 
 /*~~~~~~~~~~ project section ~~~~~~~~~~*/
 
+.mainProject ul {
+    display: flex;
+    height: 300px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mainProject ul li {
+    margin: auto;
+    text-align: center;
+}
+
+.mainProject ul li a {
+    padding: 15px;
+}
+
+.previewA, .previewB {
+    display: none;
+}
+
 
 
 /*~~~~~~~~~~ contact section ~~~~~~~~~~*/
@@ -315,6 +307,12 @@ header .arrow {
 footer {
     display: flex;
     justify-content: space-around;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    opacity: 0;
+    animation: menu 3s ease-in forwards;
 }
 
 footer a {
@@ -358,6 +356,10 @@ footer a:hover {
 @media (min-width: 1024px) {
     /*start of common rules*/
 
+    .mainProject, .mainContact {
+        margin-top: 10%;
+    }
+
     /*Enc of common rules*/
 
     /*START OF HEADER*/
@@ -385,9 +387,14 @@ footer a:hover {
 
     .mainProject ul {
         display: flex;
+        flex-direction: row;
         justify-content: center;
         position: relative;
         height: 40px;
+    }
+
+    .mainProject ul li {
+        margin: 0;
     }
 
     .mainProject a {
@@ -397,6 +404,7 @@ footer a:hover {
     }
 
     .previewA, .previewB {
+        display: block;
         background-color: black;
         left: 0;
         top: 100%;
@@ -450,16 +458,15 @@ footer a:hover {
         background-size: 100% 100%;
     }
 
-    /*.siteD:hover~.previewB {
-        background: url(../img/pba.png) no-repeat;
-        background-size: 100% 100%;
-    }*/
-
 
 
     /*END OF SECTION*/
 
     /*START OF FOOTER*/
+
+    footer {
+        width: 50%;
+    }
 
     /*END OF FOOTER*/
 }
@@ -503,6 +510,16 @@ footer a:hover {
         top: 100%;
     }
 }
+
+@keyframes menu {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 
 
 

@@ -411,6 +411,10 @@ footer a:hover {
 @media (min-width: 1024px) {
     /*start of common rules*/
 
+    .mainProject {
+        height: 100vh;
+    }
+
     .mainProject, .mainContact {
         margin-top: 10%;
     }

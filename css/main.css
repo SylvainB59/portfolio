@@ -196,40 +196,40 @@ header h1 {
   font-family: 'Indie Flower', cursive;
   letter-spacing: 3px;
   opacity: 0;
-  animation: clignote 5s step-start 1s forwards;
+  animation: clignote 4s step-start 1s forwards;
 }
 
 
 .lun {
-  animation: clignote 5s step-start 2s forwards;
+  animation: clignote 4s step-start 1s forwards;
 }
 
 .ldeux {
-  animation: clignote 5s step-start 2.8s forwards;
+  animation: clignote 4s step-start 1.8s forwards;
 }
 
 .ltrois {
-  animation: clignote 5s step-start 2.2s forwards;
+  animation: clignote 4s step-start 1.2s forwards;
 }
 
 .lquatre {
-  animation: clignote 5s step-start 2.6s forwards;
+  animation: clignote 4s step-start 1.6s forwards;
 }
 
 .lcinq {
-  animation: clignote 5s step-start 3.2s infinite;
+  animation: clignote 4s step-start 2.2s infinite;
 }
 
 .lsix {
-  animation: clignote 5s step-start 3s forwards;
+  animation: clignote 4s step-start 2s forwards;
 }
 
 .lsept {
-  animation: clignote 5s step-start 3.4s forwards;
+  animation: clignote 4s step-start 2.4s forwards;
 }
 
 .lhuit {
-  animation: clignote 5s step-start 2.4s forwards;
+  animation: clignote 4s step-start 1.4s forwards;
 }
 
 
